@@ -5,6 +5,7 @@
     <%= csrf_meta_tag %>
     <%= render 'layouts/stylesheets' %>
   </head>
+
   <body>
     <div class = "container">
       <%= render 'layouts/header' %>
@@ -13,6 +14,7 @@
       <%= yield %>
     </section>
     <%= render 'layouts/footer' %>
+    <%= debug(params) if Rails.env.development? %>
    </div>
   </body>
 </html>
